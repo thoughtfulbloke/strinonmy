@@ -50,7 +50,7 @@ if(!file.exists("oecd_unemployment.csv")){
   oecd_dataset <- "STLABOUR"
   filter_list <- list(c("AUS", "AUT", "BEL", "CAN", "CHL", "COL", "CZE", "DNK", "EST", "FIN", "FRA", "DEU", "GRC", "HUN", "ISL", "IRL", "ISR", "ITA", "JPN", "KOR", "LVA", "LTU", "LUX", "MEX", "NLD", "NZL", "NOR", "POL", "PRT", "SVK", "SVN", "ESP", "SWE", "CHE", "TUR", "GBR", "USA", "BRA", "IDN", "RUS", "ZAF"),"LRUNTTTT","ST","Q")
   oecd_data <- get_dataset(dataset = oecd_dataset, filter = filter_list,start_time = "2018-Q4", end_time = "2020-Q2")
-  write.csv(oecd_dataset, "oecd_unemployment.csv", row.names = FALSE)
+  write.csv(oecd_data, "oecd_unemployment.csv", row.names = FALSE)
   rm(oecd_data)
 }
 ```
